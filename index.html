@@ -1,26 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>News of Bengal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #fdfaf6;
+      color: #222;
+    }
+    header {
+      background: #b71c1c;
+      color: white;
+      padding: 20px 15px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    nav {
+      background: #eee;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      margin: 0 12px;
+      color: #b71c1c;
+      font-weight: bold;
+    }
+    .breaking {
+      background: #ffeb3b;
+      color: #000;
+      text-align: center;
+      padding: 8px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .main {
+      flex: 3;
+      padding-right: 20px;
+    }
+    .side {
+      flex: 1;
+      background: #fff3e0;
+      padding: 15px;
+      margin-top: 10px;
+    }
+    article {
+      background: #ffffff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-left: 4px solid #c62828;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    article h2 {
+      margin-top: 0;
+      color: #b71c1c;
+    }
+    footer {
+      background: #212121;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .main, .side {
+        padding-right: 0;
+      }
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; background-color: #fff4e6; color: #222; padding: 20px;">
-  <h1>📰 News of Bengal – Fiber Crisis Report</h1>
-  <p><strong>Date:</strong> July 12, 2025</p>
-  <hr>
-  <h2>🔴 Airtel Fiber Red Light Issue Hits Rural Bengal</h2>
-  <p>Local residents of [Your Village Name] are facing extreme latency (116ms), frequent disconnections, and red light ONT signal faults for over a week. Sources suggest backend OLT congestion or misaligned fiber joints.</p>
+<body>
 
-  <h3>📡 Key Data:</h3>
-  <ul>
-    <li>Red ONT Light Status: Ongoing</li>
-    <li>Ping: 100–120ms (unacceptable for gaming/VoIP)</li>
-    <li>Local technician: “Tower ki taraf ghuma do” 🤦‍♂️</li>
-    <li>Users affected: 20+</li>
-  </ul>
+<header>
+  <h1>📰 News of Bengal</h1>
+  <p>Your Honest Voice in Rural & Regional Reporting</p>
+</header>
 
-  <p>If you’re facing the same, mail <a href="mailto:prince@newsofbengal.com">prince@newsofbengal.com</a> or visit our community page.</p>
-  <hr>
-  <footer>Maintained by: News of Bengal Team. Site hosted on GitHub Pages.</footer>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Politics</a>
+  <a href="#">Village</a>
+  <a href="#">Tech</a>
+  <a href="#">Weather</a>
+  <a href="#">Opinion</a>
+</nav>
+
+<div class="breaking">
+  🚨 Breaking: Farmers protest unfair pricing in Nadia district – Police on alert
+</div>
+
+<div class="container">
+  <div class="main">
+    <article>
+      <h2>🛣️ Road Construction Delay in South Malda</h2>
+      <p>The new road connecting three villages remains incomplete. Locals blame contractor absence and fund mismanagement. Monsoon rains have worsened road conditions, making daily commutes risky.</p>
+    </article>
+
+    <article>
+      <h2>📡 Rural Students Struggle with Online Classes</h2>
+      <p>Unstable internet continues to affect schoolchildren in rural Bengal. With exams approaching, students are depending on weak mobile networks to attend classes, often losing connection mid-session.</p>
+    </article>
+
+    <article>
+      <h2>🌾 Paddy Prices Drop as Middlemen Gain</h2>
+      <p>Farmers from several blocks report sharp declines in market rates despite good yield. Agricultural unions demand direct government procurement to prevent exploitation by private buyers.</p>
+    </article>
+  </div>
+
+  <div class="side">
+    <h3>📅 Today</h3>
+    <p>Friday, July 12, 2025</p>
+
+    <h3>🌦️ Weather</h3>
+    <p>Rain likely by afternoon. 32°C / 24°C</p>
+
+    <h3>🗳️ Poll</h3>
+    <p>Should local news go fully digital?<br><strong>Yes</strong> | No</p>
+
+    <h3>💬 Quote</h3>
+    <p><em>"Patrakarita sirf sawaal poochhne ka kaam hai."</em></p>
+
+    <h3>📢 Contact Us</h3>
+    <p>Email: editor@newsofbengal.com</p>
+    <p>Submit news: +91 9XXXXXXXXX</p>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 News of Bengal • Hosted on GitHub Pages • Built with ❤️ for Bengal
+</footer>
+
 </body>
 </html>
+
