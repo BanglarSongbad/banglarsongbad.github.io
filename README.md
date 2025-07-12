@@ -1,1 +1,1 @@
-# newsofbengal
+# NewsofBengal
