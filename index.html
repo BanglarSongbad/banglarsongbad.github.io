@@ -1,30 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <title>News of Bengal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>বাংলার সংবাদ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
+      font-family: 'Noto Serif Bengali', serif;
+      background-color: #fffaf4;
       margin: 0;
-      font-family: 'Georgia', serif;
-      background: #fdfaf6;
+      padding: 0;
       color: #222;
     }
     header {
       background: #b71c1c;
       color: white;
-      padding: 20px 15px;
       text-align: center;
+      padding: 20px 10px;
     }
     header h1 {
       margin: 0;
-      font-size: 2.2em;
+      font-size: 2em;
+    }
+    header p {
+      margin-top: 5px;
+      font-size: 1em;
+      color: #ffcccb;
     }
     nav {
-      background: #eee;
+      background: #f3f3f3;
       text-align: center;
-      padding: 10px;
+      padding: 12px;
     }
     nav a {
       text-decoration: none;
@@ -32,120 +38,86 @@
       color: #b71c1c;
       font-weight: bold;
     }
-    .breaking {
-      background: #ffeb3b;
-      color: #000;
-      text-align: center;
-      padding: 8px;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
     .container {
       display: flex;
-      flex-wrap: wrap;
-      padding: 20px;
-      max-width: 1200px;
+      flex-direction: column;
+      max-width: 900px;
       margin: auto;
-    }
-    .main {
-      flex: 3;
-      padding-right: 20px;
-    }
-    .side {
-      flex: 1;
-      background: #fff3e0;
-      padding: 15px;
-      margin-top: 10px;
+      padding: 20px;
     }
     article {
-      background: #ffffff;
-      padding: 15px;
+      background: #fff;
       margin-bottom: 20px;
+      padding: 15px;
       border-left: 4px solid #c62828;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
     }
     article h2 {
       margin-top: 0;
       color: #b71c1c;
+      font-size: 1.3em;
+    }
+    article p {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+    article small {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.85em;
+      color: #666;
     }
     footer {
-      background: #212121;
+      background: #1c1c1c;
       color: white;
       text-align: center;
       padding: 15px;
       margin-top: 40px;
-    }
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-      .main, .side {
-        padding-right: 0;
-      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>📰 News of Bengal</h1>
-  <p>Your Honest Voice in Rural & Regional Reporting</p>
+  <h1>📰 বাংলার সংবাদ</h1>
+  <p>বাংলার প্রতিটি কোণ থেকে আপনার সত্য ও আঞ্চলিক খবর</p>
 </header>
 
 <nav>
-  <a href="#">Home</a>
-  <a href="#">Politics</a>
-  <a href="#">Village</a>
-  <a href="#">Tech</a>
-  <a href="#">Weather</a>
-  <a href="#">Opinion</a>
+  <a href="#">প্রথম পাতা</a>
+  <a href="#">রাজনীতি</a>
+  <a href="#">শিক্ষা</a>
+  <a href="#">প্রযুক্তি</a>
+  <a href="#">গ্রামাঞ্চল</a>
 </nav>
 
-<div class="breaking">
-  🚨 Breaking: Farmers protest unfair pricing in Nadia district – Police on alert
-</div>
-
-<div class="container">
-  <div class="main">
-    <article>
-      <h2>🛣️ Road Construction Delay in South Malda</h2>
-      <p>The new road connecting three villages remains incomplete. Locals blame contractor absence and fund mismanagement. Monsoon rains have worsened road conditions, making daily commutes risky.</p>
-    </article>
-
-    <article>
-      <h2>📡 Rural Students Struggle with Online Classes</h2>
-      <p>Unstable internet continues to affect schoolchildren in rural Bengal. With exams approaching, students are depending on weak mobile networks to attend classes, often losing connection mid-session.</p>
-    </article>
-
-    <article>
-      <h2>🌾 Paddy Prices Drop as Middlemen Gain</h2>
-      <p>Farmers from several blocks report sharp declines in market rates despite good yield. Agricultural unions demand direct government procurement to prevent exploitation by private buyers.</p>
-    </article>
-  </div>
-
-  <div class="side">
-    <h3>📅 Today</h3>
-    <p>Friday, July 12, 2025</p>
-
-    <h3>🌦️ Weather</h3>
-    <p>Rain likely by afternoon. 32°C / 24°C</p>
-
-    <h3>🗳️ Poll</h3>
-    <p>Should local news go fully digital?<br><strong>Yes</strong> | No</p>
-
-    <h3>💬 Quote</h3>
-    <p><em>"Patrakarita sirf sawaal poochhne ka kaam hai."</em></p>
-
-    <h3>📢 Contact Us</h3>
-    <p>Email: editor@newsofbengal.com</p>
-    <p>Submit news: +91 9XXXXXXXXX</p>
-  </div>
+<div class="container" id="news-container">
+  <!-- News articles will be loaded here from JSON -->
 </div>
 
 <footer>
-  &copy; 2025 News of Bengal • Hosted on GitHub Pages • Built with ❤️ for Bengal
+  &copy; ২০২৫ বাংলার সংবাদ • পরিচালনায় AI সম্পাদক • Hosted on GitHub Pages
 </footer>
+
+<script>
+fetch("news.json")
+  .then(res => res.json())
+  .then(newsList => {
+    const container = document.getElementById("news-container");
+    newsList.forEach(news => {
+      const article = `
+        <article>
+          <h2>${news.title}</h2>
+          <p>${news.summary}</p>
+          <small>${news.tag} • ${news.date}</small>
+        </article>
+      `;
+      container.innerHTML += article;
+    });
+  });
+</script>
 
 </body>
 </html>
+
 
